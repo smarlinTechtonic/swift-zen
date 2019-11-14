@@ -18,12 +18,16 @@ struct ContentView: View {
                     .resizable()
                     .frame(width: 300, height: 300, alignment: .center)
                     .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.white, lineWidth: 5))
                 Text("Zen World!")
                     .font(Font.custom("Pacifico-Regular", size: 40))
                     .foregroundColor(.white)
-                Text("Harness your inner peace")
+                Text("Harness your inner peace.")
                     .font(Font.custom("YeonSung-Regular", size: 30))
                 .foregroundColor(.white)
+                Divider()
+                QuoteView(quotedText: "Let go. Or be dragged...")
+                QuoteView(quotedText: "You are exactly where you need to be.")
             }
         }
     }
